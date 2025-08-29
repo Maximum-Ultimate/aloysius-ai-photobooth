@@ -13,7 +13,7 @@ import female3 from "../../assets/models/female3.png";
 
 import { Mars, User, User2, Venus } from "lucide-solid";
 import logoJudul from "../../assets/img/logoAcara.png";
-import sfxButton from "../../assets/sfx/sfxbtn.wav";
+import sfxButton from "../../assets/sfx/sfxbtn.mp3";
 import styles from "../../App.module.css";
 
 export default function ChooseGenderModel() {

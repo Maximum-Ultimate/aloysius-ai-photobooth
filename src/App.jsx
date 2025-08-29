@@ -4,12 +4,9 @@ import Home from "./layouts/components/Home";
 import Loading from "./layouts/Loading";
 import NotFoundPage from "./layouts/NotFoundPage";
 import backgroundPhotobooth from "./assets/img/bgPhotobooth.jpg";
-import TakePhoto from "./layouts/components/TakePhoto";
-import bgmPhotobooth from "./assets/sfx/bgmbyd.wav";
+import bgmPhotobooth from "./assets/sfx/bgmphotobooth.mp3";
 import TakePhotoAI from "./layouts/components/TakePhotoAI";
 import ChooseGenderModel from "./layouts/components/ChooseGenderModel";
-import iconByd from "./assets/img/bydLogo.webp";
-import iconNo1 from "./assets/img/no1Icon.webp";
 
 let bgmAudio;
 
@@ -75,7 +72,6 @@ function App() {
       ) : (
         <Router>
           <Route path="/" component={Home} />
-          <Route path="/take-photo" component={TakePhoto} />
           <Route path="/take-photo-ai" component={TakePhotoAI} />
           <Route path="/choose-gender-model" component={ChooseGenderModel} />
           <Route path="/loading" component={Loading} />

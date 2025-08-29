@@ -2,9 +2,9 @@ import { createSignal, onCleanup, onMount } from "solid-js";
 import { useNavigate, useSearchParams } from "@solidjs/router";
 import logoJudul from "../../assets/img/logoAcara.png";
 import styles from "../../App.module.css";
-import sfxCamera from "../../assets/sfx/sfxcamera.wav";
-import sfxButton from "../../assets/sfx/sfxbtn.wav";
-import sfxCountdown from "../../assets/sfx/sfxcountdown.wav";
+import sfxCamera from "../../assets/sfx/sfxcamera.mp3";
+import sfxButton from "../../assets/sfx/sfxbtn.mp3";
+import sfxCountdown from "../../assets/sfx/sfxcountdown.mp3";
 import QRComponent from "../helper/QRComponent";
 
 export default function TakePhotoAI() {

@@ -1,7 +1,7 @@
 import { useNavigate } from "@solidjs/router";
 import styles from "../../App.module.css";
 import logoJudul from "../../assets/img/logoAcara.png";
-import sfxButton from "../../assets/sfx/sfxbtn.wav";
+import sfxButton from "../../assets/sfx/sfxbtn.mp3";
 
 export default function Home() {
   const navigate = useNavigate();
