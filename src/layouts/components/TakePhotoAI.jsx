@@ -1,6 +1,6 @@
 import { createSignal, onCleanup, onMount } from "solid-js";
 import { useNavigate, useSearchParams } from "@solidjs/router";
-import logoJudul from "../../assets/img/logoByd.png";
+import logoJudul from "../../assets/img/logoAcara.png";
 import styles from "../../App.module.css";
 import sfxCamera from "../../assets/sfx/sfxcamera.wav";
 import sfxButton from "../../assets/sfx/sfxbtn.wav";
@@ -252,13 +252,13 @@ export default function TakePhotoAI() {
         <img
           src={logoJudul}
           alt="Logo"
-          class="w-[600px] my-[-100px] opacity-0"
+          class="w-[300px] mt-40 mb-10 opacity-100"
         />
         {/* <p class="text-center text-[40px] bg-gradient-to-r from-[#e9ff17] to-[#32f1fe] bg-clip-text text-transparent px-5 py-4">
           AI Photobooth
         </p> */}
 
-        <div class="w-[350px] h-auto flex justify-center">
+        <div class="w-[650px] h-auto flex justify-center">
           {!isCaptured() ? (
             <img
               id="camera-stream"
@@ -269,13 +269,13 @@ export default function TakePhotoAI() {
               // dan meneruskannya ke frontend.
               src="http://localhost:8000/stream-portrait" // <-- GANTI INI DENGAN URL PROXY BACKEND KAMU
               alt="Camera Preview"
-              class="w-[350px] h-full object-cover rounded-lg border-4 border-[#32f1fe]"
+              class="w-[650px] h-full object-cover rounded-lg border border-white/20"
             />
           ) : (
             <img
               src={photoPreview() || photoUrl()} // photoUrl dan photoPreview sekarang adalah Blob URLs
               alt="Captured"
-              class={`w-[350px] h-auto object-cover rounded-md border-4 border-[#32f1fe] ${
+              class={`w-[650px] h-auto object-cover rounded-md border border-white/20 ${
                 isLoading() ? "blur-sm" : ""
               }`}
             />
@@ -298,8 +298,8 @@ export default function TakePhotoAI() {
           <div class="absolute w-screen min-h-screen z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
             <div class="text-white text-center space-y-4">
               <div class="w-20 h-20 border-4 border-white border-dashed rounded-lg animate-spin mx-auto"></div>
-              <p class="text-3xl animate-bounce">Print Photo</p>
-              <p class="text-3xl animate-bounce">Please wait...</p>
+              <p class="text-[40px] animate-bounce">Print Photo</p>
+              <p class="text-[40px] animate-bounce">Please wait...</p>
             </div>
           </div>
         )}
@@ -309,7 +309,7 @@ export default function TakePhotoAI() {
               <button
                 onClick={handleCapture}
                 disabled={isCounting()}
-                class={`w-full bg-[#212c4a] text-white px-10 py-3 text-3xl rounded-lg shadow-lg transition-all duration-500 active:scale-75 active:bg-indigo-800 border border-purple-300 uppercase ${
+                class={`w-full bg-[#212c4a] text-white px-10 py-3 text-[40px] rounded-lg shadow-lg transition-all duration-500 active:scale-75 active:bg-indigo-800 border border-purple-300 uppercase ${
                   isCounting() ? "opacity-50 cursor-not-allowed" : ""
                 }`}
               >
@@ -321,7 +321,7 @@ export default function TakePhotoAI() {
                   buttonSound.play();
                 }}
                 disabled={isCounting()}
-                class={`w-fit bg-[#212c4a] text-white bg-clip-text px-5 py-2 text-xl rounded-lg shadow-lg transition-all duration-500 active:scale-75 active:bg-indigo-800 border border-purple-300 uppercase ${
+                class={`w-fit bg-[#212c4a] text-white bg-clip-text px-5 py-2 text-[35px] rounded-lg shadow-lg transition-all duration-500 active:scale-75 active:bg-indigo-800 border border-purple-300 uppercase ${
                   isCounting() ? "opacity-50 cursor-not-allowed" : ""
                 }`}
               >
@@ -332,7 +332,7 @@ export default function TakePhotoAI() {
             <div class="flex flex-col gap-4 w-full">
               {/* QR Button Section */}
               <button
-                class="bg-[#212c4a] text-white text-black text-2xl px-3 py-2 rounded-lg shadow-md transition-all duration-500 active:scale-75 uppercase"
+                class="bg-[#212c4a] text-white text-[40px] px-3 py-2 rounded-lg shadow-md transition-all duration-500 active:scale-75 uppercase"
                 onClick={openQrPopup}
               >
                 Show QR
@@ -340,13 +340,13 @@ export default function TakePhotoAI() {
               <div class="flex gap-4 w-full">
                 <button
                   onClick={takeNewPhoto}
-                  class="w-full bg-[#212c4a] text-white px-3 py-2 text-2xl rounded-lg uppercase shadow-md transition-all duration-500 active:scale-75"
+                  class="w-full bg-[#212c4a] text-white px-3 py-2 text-[40px] rounded-lg uppercase shadow-md transition-all duration-500 active:scale-75"
                 >
                   Take New Photo
                 </button>
                 <button
                   onClick={handlePrint}
-                  class="w-full bg-[#212c4a] text-white px-2 py-2 text-2xl rounded-lg uppercase shadow-md transition-all duration-500 active:scale-75"
+                  class="w-full bg-[#212c4a] text-white px-2 py-2 text-[40px] rounded-lg uppercase shadow-md transition-all duration-500 active:scale-75"
                 >
                   Print
                 </button>
@@ -380,13 +380,13 @@ export default function TakePhotoAI() {
               <div class="flex gap-4 w-full">
                 <button
                   onClick={handleRetake}
-                  class="w-full bg-[#212c4a] text-white px-3 py-2 text-2xl rounded-lg uppercase shadow-md transition-all duration-500 active:scale-75"
+                  class="w-full bg-[#212c4a] text-white px-3 py-2 text-[40px] rounded-lg uppercase shadow-md transition-all duration-500 active:scale-75"
                 >
                   Retake Photo
                 </button>
                 <button
                   onClick={handleConfirm}
-                  class="w-full bg-[#212c4a] text-white px-3 py-2 text-2xl rounded-lg uppercase shadow-md transition-all duration-500 active:scale-75"
+                  class="w-full bg-[#212c4a] text-white px-3 py-2 text-[40px] rounded-lg uppercase shadow-md transition-all duration-500 active:scale-75"
                 >
                   Generate
                 </button>
@@ -399,7 +399,7 @@ export default function TakePhotoAI() {
           <div class="fixed inset-0 z-50 flex flex-col items-center justify-center">
             <div class="bg-white rounded-lg p-8 shadow-lg flex flex-col items-center">
               <QRComponent urlQr={qrUrl()} />
-              <p class="text-xl mt-4 font-bold text-center">
+              <p class="text-[40px] mt-4 font-bold text-center">
                 Scan Here to Download
               </p>
               <button

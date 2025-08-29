@@ -100,7 +100,7 @@ export default function ChooseGenderModel() {
         style={{ "font-family": "Conthrax" }}
       >
         {selectedGender() === null ? (
-          <div class="flex gap-24 text-center">
+          <div class="flex gap-24 mt-10 text-center">
             <button
               onClick={() => handleGenderClick("male")}
               class="glow-gradient group flex flex-col items-center 
