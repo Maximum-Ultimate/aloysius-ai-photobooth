@@ -241,6 +241,7 @@ export default function TakePhotoAI() {
     setIsCaptured(false);
     if (photoUrl()) URL.revokeObjectURL(photoUrl()); // Bersihkan Blob URL lama
     setPhotoUrl(null);
+    navigate("/");
   };
 
   return (
