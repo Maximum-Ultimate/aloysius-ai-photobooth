@@ -29,7 +29,7 @@ code {
   border-radius: 50%;
   display: inline-block;
   position: relative;
-  background: linear-gradient(0deg, #e9ff17 10%, #ff28d3 100%);
+  background: linear-gradient(0deg, #dedede 10%, #04113f 100%);
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
