@@ -258,7 +258,7 @@ export default function TakePhotoAI() {
           AI Photobooth
         </p> */}
 
-        <div class="w-[450px] h-auto flex justify-center">
+        <div class="w-[550px] h-auto flex justify-center">
           {!isCaptured() ? (
             <img
               id="camera-stream"
@@ -269,13 +269,13 @@ export default function TakePhotoAI() {
               // dan meneruskannya ke frontend.
               src="http://localhost:8000/stream-portrait" // <-- GANTI INI DENGAN URL PROXY BACKEND KAMU
               alt="Camera Preview"
-              class="w-[450px] h-full object-cover rounded-lg border border-white/20"
+              class="w-[550px] h-full object-cover rounded-lg border border-white/20"
             />
           ) : (
             <img
               src={photoPreview() || photoUrl()} // photoUrl dan photoPreview sekarang adalah Blob URLs
               alt="Captured"
-              class={`w-[450px] h-auto object-cover rounded-md border border-white/20 ${
+              class={`w-[550px] h-auto object-cover rounded-md border border-white/20 ${
                 isLoading() ? "blur-sm" : ""
               }`}
             />
